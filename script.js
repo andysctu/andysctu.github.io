@@ -1,23 +1,3 @@
-function getRunes(){
-    aClient = new HttpClient();
-    aClient.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/48357/runes?api_key=a6e94ee5-fa0b-41e1-9cac-271e7212b875', function(response) {
-        // do something with response
-        alert(response)
-    });
-    
-    return response;
-    
-}
-
-function httpGet(theUrl) {
-    var xmlHttp = null;
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false );
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
         var anHttpRequest = new XMLHttpRequest();
@@ -30,5 +10,17 @@ var HttpClient = function() {
         anHttpRequest.send( null );
     }
 }
+
+function getRunes(){
+    aClient = new HttpClient();
+    aClient.get('https://na.api.pvp.net/api/lol/na/v1.4/summoner/48357/runes?api_key=a6e94ee5-fa0b-41e1-9cac-271e7212b875', function(response) {
+        // do something with response
+        alert(response)
+    });
+    
+    return response;
+    
+}
+
 
 
