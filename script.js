@@ -1,6 +1,9 @@
-function count_rabbits() {
-    for(var i=1; i<=3; i++) {
-        // operator + concatenates strings
-        alert("Rabbit "+i+" out of the hat!")
-    }
+function httpGet(theUrl)
+{
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }
